@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Features Demo</title>
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My PLP Assignment on HTML5</h1>
+        <p>This page demonstrates various HTML5 elements including lists, tables, forms, and multimedia.</p>
+    </header>
+
+    <!-- Ordered List Section -->
+    <section id="list-section" class="content-section">
+        <h2>Ordered List with Roman Numerals</h2>
+        <ol type="I">
+            <li>Introduction to HTML5</li>
+            <li>Semantic Elements
+                <ul>
+                    <li>Header</li>
+                    <li>Footer</li>
+                    <li>Section</li>
+                    <li>Article</li>
+                </ul>
+            </li>
+            <li>Form Elements</li>
+            <li>Multimedia Support</li>
+            <li>APIs and Integration</li>
+        </ol>
+    </section>
+
+    <!-- Image Section -->
+    <section id="image-section" class="content-section">
+        <h2>External Image</h2>
+        <figure>
+            <img id="feature-image" src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg" 
+                 alt="Laptop with code on screen - web development concept">
+            <figcaption>Web Development Environment (Source: Pexels)</figcaption>
+        </figure>
+    </section>
+
+    <!-- Table Section -->
+    <section id="table-section" class="content-section">
+        <h2>Contact Table</h2>
+        <table>
+            <caption>Contact Information</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ENOCK FIFII BAFFOE</td>
+                    <td>Takoradi, WR, GH</td>
+                    <td>(+233) 54 628 9710</td>
+                    <td>westkirk17@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Klemene Klein</td>
+                    <td>Kumasi, AR, GH</td>
+                    <td>(+233) 543 374 8976</td>
+                    <td>KKlein.17@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Michael Williams</td>
+                    <td>Accra, GR, GH</td>
+                    <td>(+233) 26 345 6789</td>
+                    <td>m.williams@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Emma Cobbinah</td>
+                    <td>Bolga, WA, GH</td>
+                    <td>(+233) 27 456 7890</td>
+                    <td>emma.c1@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Robert Blay</td>
+                    <td>Tarkwa, WR, GH</td>
+                    <td>(+233) 54 567 8901</td>
+                    <td>roberblay12@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form-section" class="content-section">
+        <h2>Registration Form</h2>
+        <form id="registration" novalidate>
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" 
+                           placeholder="Enter your full name" 
+                           required 
+                           minlength="2" 
+                           maxlength="50">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" 
+                           placeholder="example@domain.com" 
+                           required 
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <small>We'll never share your email with anyone else.</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" 
+                           placeholder="Create a strong password" 
+                           required 
+                           minlength="8"
+                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                           title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters">
+                </div>
+                
+                <div class="form-group">
+                    <label for="birthdate">Date of Birth:</label>
+                    <input type="date" id="birthdate" name="birthdate" 
+                           required 
+                           max="2007-01-01">
+                </div>
+            </fieldset>
+            
+            <!-- Additional Information -->
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="au">Australia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="male" required> Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female"> Female
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="other"> Other
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="prefer-not"> Prefer not to say
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Interests (select all that apply):</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="interests" value="technology"> Technology
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interests" value="sports"> Sports
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interests" value="music"> Music
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interests" value="travel"> Travel
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4" columns="100"
+                          placeholder="Tell us anything else you'd like to share"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="terms" required> 
+                    I agree to the terms and conditions
+                </label>
+            </div>
+            
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Multimedia Section -->
+    <section id="multimedia-section" class="content-section">
+        <h2>Multimedia Elements</h2>
+        
+        <div class="media-container">
+            <div class="media-item">
+                <h3>Video Example</h3>
+                <video controls poster="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>A sample video demonstration with controls.</p>
+            </div>
+            
+            <div class="media-item">
+                <h3>Audio Example</h3>
+                <audio controls>
+                    <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>A sample audio clip with controls.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Enock Fifii Baffoe | Created for educational purposes </p>
+    </footer>
+
+    <!-- Form validation script -->
+    <script>
+        // Basic form validation
+        document.getElementById('registration').addEventListener('submit', function(event) {
+            if (!this.checkValidity()) {
+                event.preventDefault();
+                alert('Please fill all required fields correctly.');
+            } else {
+                alert('Form submitted successfully!');
+            }
+        });
+    </script>
+</body>
+</html>
